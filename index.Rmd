@@ -54,8 +54,8 @@ election_dat30 <- readRDS("data/election_dat30.rds")
 election_dat7 <- readRDS("data/election_dat7.rds")
 #     count(coalition)
 
-last7days_string <- "5th February - 11 February 2023"
-last30days_string <- "13 February - 11 February 2023"
+last7days_string <- "6th February - 12 February 2023"
+last30days_string <- "14th January - 12 February 2023"
 
 
 source("utils.R")

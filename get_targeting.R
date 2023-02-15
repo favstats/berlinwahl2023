@@ -197,6 +197,14 @@ yo <- berlinifin %>%
     split(1:nrow(.)) %>%
     map_dfr_progress(~{scraper(.x, "30")})
 
+yo <- berlinifin %>%
+    # filter(page_id ==  "81698998693") %>%
+    # mutate(page_id = ifelse(str_detect(page_name, "Francesca De Vito"), "1962271387367370", page_id)) %>%
+    # filter(!(page_id %in% these_are_here$internal_id)) %>%
+    # filter(!(page_id %in% these_are_here_too$internal_id)) %>%
+    split(1:nrow(.)) %>%
+    map_dfr_progress(~{scraper(.x, "7")})
+
 
 last30days <- dir("30", full.names = T) %>%
     map_dfr_progress(~{
